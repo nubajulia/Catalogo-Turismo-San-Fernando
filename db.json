@@ -11,15 +11,9 @@
         "assets/imgs/teatro2.jpg",
         "assets/imgs/teatro3.jpg"
       ],
-      "valoracion": [
-        "5"
-      ],
-      "comentarios": [
-        "Un lugar con mucha historia."
-      ],
-      "comentarioUsuario": [
-        "María"
-      ],
+      "valoracion": ["5"],
+      "comentarios": ["Un lugar con mucha historia."],
+      "comentarioUsuario": ["María"],
       "id": "teatro_cortes"
     },
     {
@@ -33,15 +27,9 @@
         "assets/imgs/castillo2.jpg",
         "assets/imgs/castillo3.jpg"
       ],
-      "valoracion": [
-        "4"
-      ],
-      "comentarios": [
-        "Muy bien conservado."
-      ],
-      "comentarioUsuario": [
-        "Javier"
-      ],
+      "valoracion": ["4"],
+      "comentarios": ["Muy bien conservado."],
+      "comentarioUsuario": ["Javier"],
       "id": "castillo_romualdo"
     },
     {
@@ -55,15 +43,9 @@
         "assets/imgs/panteon2.jpg",
         "assets/imgs/panteon3.jpg"
       ],
-      "valoracion": [
-        "5"
-      ],
-      "comentarios": [
-        "Interesante para los amantes de la historia."
-      ],
-      "comentarioUsuario": [
-        "Carlos"
-      ],
+      "valoracion": ["5"],
+      "comentarios": ["Interesante para los amantes de la historia."],
+      "comentarioUsuario": ["Carlos"],
       "id": "panteon_marinos"
     },
     {
@@ -77,15 +59,9 @@
         "assets/imgs/camposoto2.jpg",
         "assets/imgs/camposoto3.jpg"
       ],
-      "valoracion": [
-        "5"
-      ],
-      "comentarios": [
-        "Un paraíso natural."
-      ],
-      "comentarioUsuario": [
-        "Lucía"
-      ],
+      "valoracion": ["5"],
+      "comentarios": ["Un paraíso natural."],
+      "comentarioUsuario": ["Lucía"],
       "id": "playa_camposoto"
     },
     {
@@ -99,16 +75,58 @@
         "assets/imgs/molino2.jpg",
         "assets/imgs/molino3.jpg"
       ],
-      "valoracion": [
-        "4"
-      ],
-      "comentarios": [
-        "Curioso e interesante."
-      ],
-      "comentarioUsuario": [
-        "Antonio"
-      ],
+      "valoracion": ["4"],
+      "comentarios": ["Curioso e interesante."],
+      "comentarioUsuario": ["Antonio"],
       "id": "molino_zaporito"
+    },
+    {
+      "nombre": "Iglesia Mayor Parroquial",
+      "descripcion": "Templo de gran importancia histórica y arquitectónica.",
+      "parrafo1": "Construida en el siglo XVIII, con un estilo barroco impresionante.",
+      "parrafo2": "Se celebran visitas guiadas y eventos religiosos.",
+      "imagenUrl": "assets/img/iglesiaMayor.JPG",
+      "imagenGaleria": [
+        "assets/imgs/iglesia1.jpg",
+        "assets/imgs/iglesia2.jpg",
+        "assets/imgs/iglesia3.jpg"
+      ],
+      "valoracion": ["5"],
+      "comentarios": ["Una joya arquitectónica."],
+      "comentarioUsuario": ["Fernando"],
+      "id": "iglesia_mayor"
+    },
+    {
+      "nombre": "Museo Naval de San Fernando",
+      "descripcion": "Museo con exposiciones sobre la historia naval de España.",
+      "parrafo1": "Cuenta con una impresionante colección de objetos marítimos.",
+      "parrafo2": "Ideal para aprender sobre la historia naval de la región.",
+      "imagenUrl": "assets/img/museoNaval.jpg",
+      "imagenGaleria": [
+        "assets/imgs/museo1.jpg",
+        "assets/imgs/museo2.jpg",
+        "assets/imgs/museo3.jpg"
+      ],
+      "valoracion": ["5"],
+      "comentarios": ["Muy interesante para los amantes del mar."],
+      "comentarioUsuario": ["Sofía"],
+      "id": "museo_naval"
+    },
+    {
+      "nombre": "Parque Natural Bahía de Cádiz",
+      "descripcion": "Espacio protegido con gran biodiversidad y rutas naturales.",
+      "parrafo1": "Hogar de numerosas especies de aves y flora autóctona.",
+      "parrafo2": "Ideal para senderismo, ciclismo y observación de la naturaleza.",
+      "imagenUrl": "assets/img/parqueNatural.jpg",
+      "imagenGaleria": [
+        "assets/imgs/parque1.jpg",
+        "assets/imgs/parque2.jpg",
+        "assets/imgs/parque3.jpg"
+      ],
+      "valoracion": ["5"],
+      "comentarios": ["Un lugar perfecto para disfrutar de la naturaleza."],
+      "comentarioUsuario": ["Manuel"],
+      "id": "parque_bahia"
     }
   ],
   "usuarios": [

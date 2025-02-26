@@ -1,5 +1,5 @@
 mat-toolbar.navbar {
-  background: rgb(1, 132, 139);
+  background: #01848b;
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -7,7 +7,7 @@ mat-toolbar.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 10px #0000004d;
   position: fixed;
   top: 0;
   left: 0;
@@ -45,10 +45,6 @@ mat-toolbar.navbar {
   border-radius: 8px;
 }
 
-button {
-  color: white;
-}
-
 .logo mat-icon {
   font-size: 28px;
 }
@@ -69,7 +65,7 @@ button {
   border: none;
   border-radius: 8px;
   background: white;
-  color: black;
+  color:rgb(18, 64, 128);
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
@@ -77,7 +73,7 @@ button {
 }
 
 button:hover {
-  background: rgb(18, 64, 128);
+  background: #124080;
   transform: scale(1.1);
   color: white;
 }

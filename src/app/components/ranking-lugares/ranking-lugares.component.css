@@ -1,93 +1,91 @@
-.grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  padding: 20px;
-  max-width: 1400px;
-  margin: auto;
-}
-
 .ranking-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #ff9800, #ffcc80);
-  border-radius: 15px;
+  padding: 40px;
+  background: #01848b;
+  border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.ranking-card {
+  background: #ffffff26;
+  border: 2px solid #ffffff4d;
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.ranking-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  max-width: 800px;
+  gap: 10px;
 }
 
 .ranking-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 .ranking-item:hover {
-  transform: scale(1.05);
-}
-
-.ranking-card {
-  background: #ffffff;
-  border: 2px solid #ff9800;
-  border-radius: 12px;
-  padding: 25px;
-  width: 100%;
-  max-width: 1000px;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .ranking-position {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #d32f2f;
+  color: #ffeb3b;
 }
 
-.sitio-nombre {
+.lugar-nombre {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #333;
+  color: #ffffff;
   font-family: 'Poppins', sans-serif;
 }
 
-.sitio-rating {
+.lugar-rating {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #4CAF50;
+  color: #ffeb3b;
   font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 768px) {
-  .grid-container {
-      flex-direction: column;
-      align-items: center;
-  }
-
   .ranking-container {
-      flex-direction: column;
-      padding: 20px;
+    padding: 20px;
   }
 
   .ranking-card {
-      max-width: 90%;
-      font-size: 1rem;
+    font-size: 1.1rem;
+    max-width: 95%;
+  }
+
+  .ranking-item {
+    padding: 12px;
+    font-size: 1rem;
   }
 }

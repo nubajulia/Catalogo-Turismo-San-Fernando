@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -6,12 +7,9 @@ body {
 }
 
 .hero {
-  background: rgb(18, 64, 128);
-  color: rgb(255, 255, 255);
+  color: #124080;
   text-align: center;
-  padding: 80px;
-  border-radius: 0 0 50px 50px;
-  margin-top: 1400px;
+  padding-top: 1500px;
 }
 
 .hero h1 {
@@ -47,9 +45,10 @@ body {
 .featured-card {
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px #00000033;
   overflow: hidden;
-  background-color: rgb(1, 132, 139);
+  background-color: #01848b;
+  text-align: center;
 }
 
 .carousel {
@@ -59,15 +58,16 @@ body {
 
 .carousel h2 {
   font-size: 2rem;
-  color: rgb(1, 132, 139);
+  color: #124080;
   margin-bottom: 20px;
 }
 
 .carousel-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
   overflow-x: auto;
-  gap: 15px;
+  gap: 20px;
   padding: 10px;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -81,13 +81,37 @@ body {
   min-width: 200px;
   max-width: 220px;
   flex-shrink: 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px #00000033;
   transition: transform 0.3s;
+  background-color: #124080;
 }
 
 .carousel-item:hover {
   transform: scale(1.05);
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: #124080;
+  transform: scale(1.1);
+  color: white;
+}
+
+.custom-button:hover{
+  background: #01848b;
+  transform: scale(1.1);
+  color: white;
 }
 
 mat-card img {
@@ -95,26 +119,17 @@ mat-card img {
   height: 120px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
-  background-color: rgb(1, 132, 139);
 }
 
 mat-card-content {
   padding: 10px;
   font-size: 0.85rem;
-  background-color: rgb(1, 132, 139);
 }
 
 mat-card-actions {
   display: flex;
   justify-content: center;
   padding: 10px;
-  background-color: rgb(1, 132, 139);
-}
-
-button {
-  border-radius: 6px;
-  font-size: 0.8px;
-  background-color: white;
 }
 
 @media (max-width: 768px) {

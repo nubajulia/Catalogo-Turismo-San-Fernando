@@ -5,10 +5,12 @@ mat-card {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding-top: 400px;
+  text-align: center;
 }
 
 mat-card-header {
-  background: linear-gradient(135deg, #4CAF50, #388E3C);
+  background: #124080;
   color: white;
   padding: 12px;
   border-radius: 10px 10px 0 0;
@@ -23,15 +25,15 @@ mat-card-title {
 mat-card-content {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #444;
+  color: #000000;
 }
 
 mat-card img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 1px;
+  box-shadow: 0 3px 10px #00000033;
 }
 
 mat-card-actions {
@@ -41,25 +43,27 @@ mat-card-actions {
 }
 
 button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1rem;
+  padding: 8px 15px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  background: #01848b;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 button:hover {
-  background-color: #388E3C;
+  background: #124080;
+  transform: scale(1.1);
+  color: white;
 }
 
 h3 {
-  color: #222;
+  color: #124080;
   font-size: 1.4rem;
   margin-top: 25px;
-  border-bottom: 2px solid #4CAF50;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -100,9 +104,9 @@ ng-template {
 
 p {
   font-size: 1.1rem;
-  color: #444;
+  color: #000000;
 }
 
-strong {
-  color: #4CAF50;
-}
+
+
+

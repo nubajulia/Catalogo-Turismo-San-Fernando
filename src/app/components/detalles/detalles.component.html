@@ -5,7 +5,6 @@
     <mat-card-header>
       <mat-card-title>{{ lugar.nombre }}</mat-card-title>
     </mat-card-header>
-    <mat-divider></mat-divider>
 
     <img mat-card-image [src]="lugar.imagenUrl" [alt]="lugar.nombre">
 
@@ -21,10 +20,8 @@
     </mat-card-content>
 
     <mat-card-actions align="end">
-      <button mat-raised-button color="primary" (click)="goBack()">Volver</button>
+      <button mat-raised-button (click)="goBack()">Volver</button>
     </mat-card-actions>
-
-    <mat-divider></mat-divider>
 
     <section class="comentarios-section">
       <h3>Comentarios</h3>
@@ -44,8 +41,6 @@
       </ng-template>
     </section>
 
-    <mat-divider></mat-divider>
-
     <section class="nuevo-comentario">
       <h3>Deja tu comentario</h3>
       <ng-container *ngIf="authService.estaAutentificado(); else notAuthenticated">
@@ -59,7 +54,7 @@
           <input matInput type="number" [(ngModel)]="nuevaValoracion" min="1" max="5">
         </mat-form-field>
 
-        <button mat-raised-button color="accent" (click)="anadirComentario()">Añadir comentario</button>
+        <button mat-raised-button (click)="anadirComentario()">Añadir comentario</button>
       </ng-container>
 
       <ng-template #notAuthenticated>
