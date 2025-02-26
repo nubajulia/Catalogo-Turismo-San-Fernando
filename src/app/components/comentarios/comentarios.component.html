@@ -1,0 +1,10 @@
+<div class="comentarios-wrapper" *ngIf="comentarios.length > 0">
+  <div class="comentario-box">
+    <div class="comentario-burbuja">
+      <p class="comentario-texto">"{{ comentarios[indiceComentarioActual].comentario }}"</p>
+    </div>
+    <div class="comentario-autor">
+      <span>- {{ comentarios[indiceComentarioActual].usuario }}</span>
+    </div>
+  </div>
+</div>

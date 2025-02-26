@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+
+<div class="register-wrapper">
+  <mat-card class="register-card">
+    <div class="register-header">
+      <h2>Crear Cuenta</h2>
+      <p>Únete a nuestra comunidad y descubre nuevos lugares</p>
+    </div>
+
+    <mat-card-content>
+      <form (ngSubmit)="registro()" #registerForm="ngForm">
+        <div class="input-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" [(ngModel)]="usuario.nombre" name="nombre" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Apellidos</mat-label>
+            <input matInput type="text" [(ngModel)]="usuario.apellido" name="apellido" required>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" [(ngModel)]="usuario.correo" name="correo" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" [(ngModel)]="usuario.contrasena" name="contrasena" required>
+        </mat-form-field>
+
+        <div class="input-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Teléfono</mat-label>
+            <input matInput type="tel" [(ngModel)]="usuario.telefono" name="telefono">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput type="date" [(ngModel)]="usuario.cumpleanos" name="cumpleanos">
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Género</mat-label>
+          <mat-select [(ngModel)]="usuario.genero" name="gender">
+            <mat-option value="masculino">Masculino</mat-option>
+            <mat-option value="femenino">Femenino</mat-option>
+            <mat-option value="otro">Otro</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Comunidad Autónoma</mat-label>
+          <input matInput type="text" [(ngModel)]="usuario.comunidad" name="comunidad">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">
+          Registrarse
+        </button>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions class="register-footer">
+      <button mat-button routerLink="/login">¿Ya tienes cuenta? <strong>Inicia sesión</strong></button>
+    </mat-card-actions>
+  </mat-card>
+</div>

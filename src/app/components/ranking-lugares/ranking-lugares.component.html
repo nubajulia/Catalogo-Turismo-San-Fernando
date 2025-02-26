@@ -1,0 +1,18 @@
+<div class="ranking-container">
+  <mat-card class="ranking-card">
+    <mat-card-header>
+      <mat-card-title>🏆 Top mejores lugares</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let lugar of lugaresMejorValorados; let i = index">
+          <span class="ranking-position">{{ i + 1 }}.</span>
+          <span class="sitio-nombre"> {{ lugar.nombre }} </span>
+          <span class="sitio-rating" *ngIf="lugar.valoracion && lugar.valoracion.length > 0">
+            ⭐ {{ (obtenerMediaValoraciones(lugar.valoracion)) | number:'1.1-1' }}
+          </span>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

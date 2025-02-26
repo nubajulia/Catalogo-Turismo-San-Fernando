@@ -1,0 +1,110 @@
+mat-toolbar.navbar {
+  background: rgb(1, 132, 139);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+button {
+  color: white;
+}
+
+.logo mat-icon {
+  font-size: 28px;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: rgb(18, 64, 128);
+  transform: scale(1.1);
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  mat-toolbar.navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .navbar-center {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  button {
+    width: 100px;
+  }
+}

@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+<div class="container" *ngIf="lugar; else noData">
+  <mat-card class="lugar-card">
+    <mat-card-header>
+      <mat-card-title>{{ lugar.nombre }}</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+
+    <img mat-card-image [src]="lugar.imagenUrl" [alt]="lugar.nombre">
+
+    <mat-card-content>
+      <p class="descripcion">{{ lugar.descripcion }}</p>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Más información </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ lugar.parrafo1 }}</p>
+        <p>{{ lugar.parrafo2 }}</p>
+      </mat-expansion-panel>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="goBack()">Volver</button>
+    </mat-card-actions>
+
+    <mat-divider></mat-divider>
+
+    <section class="comentarios-section">
+      <h3>Comentarios</h3>
+
+      <mat-list *ngIf="lugar.comentarios.length > 0; else noComments">
+        <mat-list-item *ngFor="let comment of lugar.comentarios; let i = index">
+          <mat-icon matListIcon>person</mat-icon>
+          <div class="comentario-content">
+            <p><strong>{{ lugar.comentarioUsuario[i] }}</strong></p>
+            <p>{{ comment }}</p>
+          </div>
+        </mat-list-item>
+      </mat-list>
+
+      <ng-template #noComments>
+        <p class="sin-comentarios">Todavía no hay comentarios.</p>
+      </ng-template>
+    </section>
+
+    <mat-divider></mat-divider>
+
+    <section class="nuevo-comentario">
+      <h3>Deja tu comentario</h3>
+      <ng-container *ngIf="authService.estaAutentificado(); else notAuthenticated">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Comentario</mat-label>
+          <textarea matInput [(ngModel)]="nuevoComentario"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Puntuación</mat-label>
+          <input matInput type="number" [(ngModel)]="nuevaValoracion" min="1" max="5">
+        </mat-form-field>
+
+        <button mat-raised-button color="accent" (click)="anadirComentario()">Añadir comentario</button>
+      </ng-container>
+
+      <ng-template #notAuthenticated>
+        <p>Debes iniciar sesión para dejar un comentario.</p>
+      </ng-template>
+    </section>
+  </mat-card>
+</div>
+
+<ng-template #noData>
+  <p>No se encontró el lugar.</p>
+</ng-template>

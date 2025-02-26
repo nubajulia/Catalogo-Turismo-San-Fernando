@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<div class="admin-container">
+  <div class="admin-header">
+    <h2>Panel de Administración</h2>
+    <p>Gestiona las localizaciones desde aquí.</p>
+  </div>
+
+  <div class="form-container">
+    <form (ngSubmit)="anadirnuevoLugar()" class="form-grid">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" [(ngModel)]="nuevoLugar.nombre" name="name" required placeholder="Ejemplo: Parque Central" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input matInput type="text" [(ngModel)]="nuevoLugar.descripcion" name="description" required placeholder="Breve descripción" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ubicación</mat-label>
+        <input matInput type="text" [(ngModel)]="nuevoLugar.localizacion" name="location" required placeholder="Ciudad, País" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Párrafo 1</mat-label>
+        <textarea matInput [(ngModel)]="nuevoLugar.parrafo1" name="parrafo1" required placeholder="Introducción"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Párrafo 2</mat-label>
+        <textarea matInput [(ngModel)]="nuevoLugar.parrafo2" name="parrafo2" required placeholder="Más detalles"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>URL de la Imagen</mat-label>
+        <input matInput type="text" [(ngModel)]="nuevoLugar.imagenUrl" name="imagenUrl" required placeholder="https://ejemplo.com/imagen.jpg" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit"
+        [disabled]="!nuevoLugar.nombre || !nuevoLugar.descripcion || !nuevoLugar.localizacion || !nuevoLugar.imagenUrl">
+        <mat-icon>add</mat-icon> Añadir Sitio
+      </button>
+    </form>
+  </div>
+</div>

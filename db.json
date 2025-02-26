@@ -1,0 +1,140 @@
+{
+  "lugares": [
+    {
+      "nombre": "Real Teatro de Las Cortes",
+      "descripcion": "Lugar emblemático donde se reunieron las Cortes de 1810.",
+      "parrafo1": "Este teatro histórico fue testigo de la promulgación de la Constitución de 1812.",
+      "parrafo2": "Horario: Abierto para visitas y eventos culturales.",
+      "imagenUrl": "assets/img/teatroCortes.jpg",
+      "imagenGaleria": [
+        "assets/imgs/teatro1.jpg",
+        "assets/imgs/teatro2.jpg",
+        "assets/imgs/teatro3.jpg"
+      ],
+      "valoracion": [
+        "5"
+      ],
+      "comentarios": [
+        "Un lugar con mucha historia."
+      ],
+      "comentarioUsuario": [
+        "María"
+      ],
+      "id": "teatro_cortes"
+    },
+    {
+      "nombre": "Castillo de San Romualdo",
+      "descripcion": "Fortaleza medieval con historia árabe y cristiana.",
+      "parrafo1": "Construido en el siglo XIII, sirvió como defensa de la ciudad.",
+      "parrafo2": "Actualmente es un museo con exposiciones sobre la historia local.",
+      "imagenUrl": "assets/img/castilloRomualdo.jpg",
+      "imagenGaleria": [
+        "assets/imgs/castillo1.jpg",
+        "assets/imgs/castillo2.jpg",
+        "assets/imgs/castillo3.jpg"
+      ],
+      "valoracion": [
+        "4"
+      ],
+      "comentarios": [
+        "Muy bien conservado."
+      ],
+      "comentarioUsuario": [
+        "Javier"
+      ],
+      "id": "castillo_romualdo"
+    },
+    {
+      "nombre": "Panteón de Marinos Ilustres",
+      "descripcion": "Monumento dedicado a grandes figuras de la Armada Española.",
+      "parrafo1": "Un lugar de homenaje a los héroes navales.",
+      "parrafo2": "Visitas guiadas disponibles.",
+      "imagenUrl": "assets/img/panteonMarinos.jpg",
+      "imagenGaleria": [
+        "assets/imgs/panteon1.jpg",
+        "assets/imgs/panteon2.jpg",
+        "assets/imgs/panteon3.jpg"
+      ],
+      "valoracion": [
+        "5"
+      ],
+      "comentarios": [
+        "Interesante para los amantes de la historia."
+      ],
+      "comentarioUsuario": [
+        "Carlos"
+      ],
+      "id": "panteon_marinos"
+    },
+    {
+      "nombre": "Playa de Camposoto",
+      "descripcion": "Una de las playas más tranquilas y naturales de la provincia.",
+      "parrafo1": "Kilómetros de arena dorada y dunas protegidas.",
+      "parrafo2": "Perfecta para los amantes de la naturaleza.",
+      "imagenUrl": "assets/img/camposoto.jpg",
+      "imagenGaleria": [
+        "assets/imgs/camposoto1.jpg",
+        "assets/imgs/camposoto2.jpg",
+        "assets/imgs/camposoto3.jpg"
+      ],
+      "valoracion": [
+        "5"
+      ],
+      "comentarios": [
+        "Un paraíso natural."
+      ],
+      "comentarioUsuario": [
+        "Lucía"
+      ],
+      "id": "playa_camposoto"
+    },
+    {
+      "nombre": "Molino de Mareas del Zaporito",
+      "descripcion": "Antiguo molino de mareas restaurado.",
+      "parrafo1": "Ejemplo de la importancia de la energía mareomotriz en la historia local.",
+      "parrafo2": "Visitable y con exposiciones sobre su funcionamiento.",
+      "imagenUrl": "assets/img/molinoZaporito.jpg",
+      "imagenGaleria": [
+        "assets/imgs/molino1.jpg",
+        "assets/imgs/molino2.jpg",
+        "assets/imgs/molino3.jpg"
+      ],
+      "valoracion": [
+        "4"
+      ],
+      "comentarios": [
+        "Curioso e interesante."
+      ],
+      "comentarioUsuario": [
+        "Antonio"
+      ],
+      "id": "molino_zaporito"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "julia",
+      "nombre": "julia",
+      "apellido": "nunez",
+      "correo": "admin@admin.com",
+      "contrasena": "$2b$10$lr0SKLMTEvvYU8BcAiKJru1rqLEi7CJA2ZWTL8RG9XQDGW1/zf0ai",
+      "telefono": "645374857",
+      "cumpleanos": "1992-03-04",
+      "genero": "femenino",
+      "rol": "administrador",
+      "comunidad": "Cadiz"
+    },
+    {
+      "id": "1951",
+      "nombre": "maria",
+      "apellido": "pado",
+      "correo": "maria@gmail.com",
+      "contrasena": "$2b$10$4EC0sHYgQhOv23eozPKGOuVTyU9TqsrWJmSCjROxfsPhAD33bemLO",
+      "telefono": "4533454545",
+      "cumpleanos": "6656-05-06",
+      "genero": "femenino",
+      "rol": "usuario",
+      "comunidad": "Sevilla"
+    }
+  ]
+}
