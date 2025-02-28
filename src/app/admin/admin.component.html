@@ -1,47 +1,70 @@
 <app-navbar></app-navbar>
 
-<div class="admin-container">
+<div id="editar-lugar" class="admin-container">
   <div class="admin-header">
     <h2>Panel de Administración</h2>
     <p>Gestiona las localizaciones desde aquí.</p>
   </div>
 
   <div class="form-container">
-    <form (ngSubmit)="anadirnuevoLugar()" class="form-grid">
+    <form (ngSubmit)="editando ? guardarEdicion() : anadirnuevoLugar()" class="form-grid">
       <mat-form-field appearance="outline">
         <mat-label>Nombre</mat-label>
-        <input matInput type="text" [(ngModel)]="nuevoLugar.nombre" name="name" required placeholder="Ejemplo: Parque Central" />
+        <input matInput type="text" [(ngModel)]="nuevoLugar.nombre" name="name" required />
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Descripción</mat-label>
-        <input matInput type="text" [(ngModel)]="nuevoLugar.descripcion" name="description" required placeholder="Breve descripción" />
+        <input matInput type="text" [(ngModel)]="nuevoLugar.descripcion" name="description" required />
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Ubicación</mat-label>
-        <input matInput type="text" [(ngModel)]="nuevoLugar.localizacion" name="location" required placeholder="Ciudad, País" />
+        <input matInput type="text" [(ngModel)]="nuevoLugar.localizacion" name="location" required />
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Párrafo 1</mat-label>
-        <textarea matInput [(ngModel)]="nuevoLugar.parrafo1" name="parrafo1" required placeholder="Introducción"></textarea>
+        <textarea matInput [(ngModel)]="nuevoLugar.parrafo1" name="parrafo1" required></textarea>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Párrafo 2</mat-label>
-        <textarea matInput [(ngModel)]="nuevoLugar.parrafo2" name="parrafo2" required placeholder="Más detalles"></textarea>
+        <textarea matInput [(ngModel)]="nuevoLugar.parrafo2" name="parrafo2" required></textarea>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>URL de la Imagen</mat-label>
-        <input matInput type="text" [(ngModel)]="nuevoLugar.imagenUrl" name="imagenUrl" required placeholder="https://ejemplo.com/imagen.jpg" />
+        <input matInput type="text" [(ngModel)]="nuevoLugar.imagenUrl" name="imagenUrl" required />
       </mat-form-field>
 
-      <button mat-raised-button type="submit"
-        [disabled]="!nuevoLugar.nombre || !nuevoLugar.descripcion || !nuevoLugar.localizacion || !nuevoLugar.imagenUrl">
-        <mat-icon>add</mat-icon> Añadir Lugar
+      <button mat-raised-button type="submit">
+        <mat-icon>{{ editando ? 'save' : 'add' }}</mat-icon>
+        {{ editando ? 'Guardar Cambios' : 'Añadir Lugar' }}
       </button>
+
+      <button mat-button *ngIf="editando" type="button" (click)="cancelarEdicion()">Cancelar</button>
     </form>
+  </div>
+
+  <div class="lista-lugares">
+    <h3>Lugares Registrados</h3>
+    <mat-card *ngFor="let lugar of lugares">
+      <mat-card-header>
+        <mat-card-title>{{ lugar.nombre }}</mat-card-title>
+        <mat-card-subtitle>{{ lugar.localizacion }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ lugar.descripcion }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="editarLugar(lugar)" >
+          <mat-icon>edit</mat-icon> Editar
+        </button>
+        <button mat-button (click)="eliminarLugar(lugar.id)">
+          <mat-icon>delete</mat-icon> Eliminar
+        </button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>

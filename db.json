@@ -16,7 +16,8 @@
       "comentarioUsuario": [
         "María"
       ],
-      "id": "teatro_cortes"
+      "id": "teatro_cortes",
+      "localizacion": "San Fernando"
     },
     {
       "nombre": "Castillo de San Romualdo",
@@ -34,7 +35,8 @@
       "comentarioUsuario": [
         "Javier"
       ],
-      "id": "castillo_romualdo"
+      "id": "castillo_romualdo",
+      "localizacion": "San Fernando"
     },
     {
       "nombre": "Panteón de Marinos Ilustres",
@@ -52,7 +54,8 @@
       "comentarioUsuario": [
         "Carlos"
       ],
-      "id": "panteon_marinos"
+      "id": "panteon_marinos",
+      "localizacion": "San Fernando"
     },
     {
       "nombre": "Playa de Camposoto",
@@ -70,7 +73,8 @@
       "comentarioUsuario": [
         "Lucía"
       ],
-      "id": "playa_camposoto"
+      "id": "playa_camposoto",
+      "localizacion": "San Fernando"
     },
     {
       "nombre": "Molino de Mareas del Zaporito",
@@ -89,7 +93,8 @@
       "comentarioUsuario": [
         "Antonio"
       ],
-      "id": "molino_zaporito"
+      "id": "molino_zaporito",
+      "localizacion": "San Fernando"
     },
     {
       "nombre": "Iglesia Mayor Parroquial",
@@ -107,7 +112,8 @@
       "comentarioUsuario": [
         "Fernando"
       ],
-      "id": "iglesia_mayor"
+      "id": "iglesia_mayor",
+      "localizacion": "San Fernando"
     },
     {
       "nombre": "Museo Naval de San Fernando",
@@ -125,7 +131,8 @@
       "comentarioUsuario": [
         "Sofía"
       ],
-      "id": "museo_naval"
+      "id": "museo_naval",
+      "localizacion": "San Fernando"
     },
     {
       "nombre": "Parque Natural Bahía de Cádiz",
@@ -143,7 +150,8 @@
       "comentarioUsuario": [
         "Manuel"
       ],
-      "id": "parque_bahia"
+      "id": "parque_bahia",
+      "localizacion": "San Fernando"
     }
   ],
   "usuarios": [

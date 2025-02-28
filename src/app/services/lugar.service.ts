@@ -23,13 +23,21 @@ export class LugarService {
     return this.http.post<Lugar>(this.apiURL, lugar);
   }
 
+  actualizarLugar(lugar: Lugar): Observable<Lugar> {
+    return this.http.put<Lugar>(`${this.apiURL}/${lugar.id}`, lugar);
+  }
+
+  eliminarLugar(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiURL}/${id}`);
+  }
+
   anadirComentarioLugar(lugarId: string, comentario: string, valoracion: number, usuario: string): Observable<Lugar> {
     return this.obtenerLugarById(lugarId).pipe(
       map((lugar: Lugar) => ({
         ...lugar,
         comentarios: [...lugar.comentarios, comentario],
         valoracion: [...lugar.valoracion, valoracion],
-        comentarioUsuario: [...lugar.comentarioUsuario,usuario]
+        comentarioUsuario: [...lugar.comentarioUsuario, usuario]
       })),
       switchMap((actualizarLugar: Lugar) => this.http.put<Lugar>(`${this.apiURL}/${lugarId}`, actualizarLugar))
     );
@@ -53,7 +61,7 @@ export class LugarService {
     );
   }
 
-  private usuariosUrl = 'http://localhost:3000/usuarios'
+  private usuariosUrl = 'http://localhost:3000/usuarios';
 
   obtenerUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.usuariosUrl);

@@ -7,11 +7,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 export const routes: Routes = [
   { path: '', component: ListaLugaresComponent },
   { path: 'detalle/:id', loadComponent: () => import('./components/detalles/detalles.component').then(m => m.DetallesComponent) },
-  {
-    path: 'admin',
-    loadComponent: () => import('./admin/admin.component').then(m => m.AdminComponent),
-    canActivate: [AdminGuard]
-  },
+  {path: 'admin',loadComponent: () => import('./admin/admin.component').then(m => m.AdminComponent),canActivate: [AdminGuard]},
   { path: 'anadir-lugar', loadComponent: () => import('./admin/admin.component').then(m => m.AdminComponent), canActivate: [AdminGuard] },
   { path: 'iniciosesion', component: IniciarSesionComponent },
   { path: 'registro', component: RegistroComponent },
