@@ -38,7 +38,7 @@
         <input matInput type="text" [(ngModel)]="nuevoLugar.imagenUrl" name="imagenUrl" required placeholder="https://ejemplo.com/imagen.jpg" />
       </mat-form-field>
 
-      <button mat-raised-button color="primary" type="submit"
+      <button mat-raised-button type="submit"
         [disabled]="!nuevoLugar.nombre || !nuevoLugar.descripcion || !nuevoLugar.localizacion || !nuevoLugar.imagenUrl">
         <mat-icon>add</mat-icon> Añadir Lugar
       </button>

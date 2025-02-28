@@ -5,14 +5,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
-import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  imports: [MatCardModule,MatSnackBarModule, MatToolbarModule, CommonModule,MatIcon]
+  imports: [MatCardModule,MatSnackBarModule, MatToolbarModule, CommonModule]
 })
 export class NavbarComponent {
   constructor(private authService: AuthService, private router: Router) {}

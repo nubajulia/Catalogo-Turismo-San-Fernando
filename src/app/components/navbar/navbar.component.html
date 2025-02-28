@@ -10,8 +10,5 @@
     <button *ngIf="!isAuthenticated" mat-button (click)="goToLogin()">Iniciar Sesion</button>
     <button *ngIf="!isAuthenticated" mat-button (click)="goToRegister()">Registrarse</button>
     <button *ngIf="isAuthenticated" mat-button (click)="logout()">Logout</button>
-    <button *ngIf="rol === 'administrador'" mat-icon-button (click)="addNewSite()">
-      <mat-icon>add_circle</mat-icon>
-    </button>
   </div>
 </mat-toolbar>
