@@ -20,7 +20,7 @@ export class NavbarComponent {
     return this.authService.estaAutentificado();
   }
 
-  get role(): string | null {
+  get rol(): string | null {
     return this.authService.obtenerRol();
   }
 

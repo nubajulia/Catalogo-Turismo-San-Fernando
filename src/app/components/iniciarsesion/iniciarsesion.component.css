@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: radial-gradient(circle, #1976d2, #1565c0);
 }
 
 .login-card {
@@ -17,14 +16,12 @@
 }
 
 .login-logo {
-  width: 80px;
-  margin-bottom: 10px;
+  width: 200px;
 }
 
 mat-card-title h2 {
   font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 10px;
+  color: #124080;
 }
 
 mat-form-field {
@@ -40,11 +37,7 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #0d47a1;
+  background-color: #124080;
 }
 
 .error-message {

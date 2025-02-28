@@ -23,7 +23,6 @@ import * as bcrypt from 'bcryptjs';
   standalone: true,
   imports: [FormsModule, CommonModule, NavbarComponent, MatCard, MatCardTitle,MatInputModule, MatCardHeader, MatCardContent, MatFormField,MatLabel,MatCardActions,MatIcon]
 })
-
 export class IniciarSesionComponent {
   correo: string = '';
   contrasena: string = '';
@@ -39,33 +38,45 @@ export class IniciarSesionComponent {
     this.lugaresServicio.obtenerUsuarios().subscribe((usuarios) => {
       if (!usuarios || !Array.isArray(usuarios)) {
         this.mensajeError = 'Error al obtener usuarios';
+        console.error(this.mensajeError);
         return;
       }
 
       const usuario = usuarios.find((usuario) => usuario.correo === this.correo);
 
       if (usuario) {
-        bcrypt.compare(this.contrasena, usuario.contrasena, (err, result) => {
-          if (err) {
-            console.error('Error al comparar la contraseña', err);
-            this.mensajeError = 'Error al verificar credenciales';
-            return;
-          }
+        console.log('Usuario encontrado:', usuario);
 
-          if (result) {
-            console.log('Usuario autenticado:', usuario);
-            const token = `fake-jwt-token.${btoa(JSON.stringify({ role: usuario.rol, exp: Math.floor(Date.now() / 1000) + 3600 }))}.signature`;
-            this.authService.iniciarSesion(token, usuario);
-            this.router.navigate([usuario.rol === 'administrador' ? '/admin' : '/']);
+        const result = bcrypt.compareSync(this.contrasena, usuario.contrasena);
+
+        if (result) {
+          console.log('Autenticación exitosa, usuario:', usuario);
+
+          const token = `fake-jwt-token.${btoa(JSON.stringify({ rol: usuario.rol, exp: Math.floor(Date.now() / 1000) + 3600 }))}.signature`;
+          this.authService.iniciarSesion(token, usuario);
+
+          console.log('Rol del usuario:', usuario.rol);
+
+          if (usuario.rol === 'administrador') {
+            console.log('Redirigiendo al panel de administración...');
+            this.router.navigate(['/admin']);
           } else {
-            this.mensajeError = 'Usuario o contraseña incorrectos';
-            alert(this.mensajeError);
+            console.log('Redirigiendo al inicio...');
+            this.router.navigate(['/']);
           }
-        });
+        } else {
+          this.mensajeError = 'Usuario o contraseña incorrectos';
+          console.warn(this.mensajeError);
+          alert(this.mensajeError);
+        }
       } else {
         this.mensajeError = 'Usuario o contraseña incorrectos';
+        console.warn(this.mensajeError);
         alert(this.mensajeError);
       }
+    }, (error) => {
+      console.error('Error al obtener usuarios desde el servicio', error);
+      this.mensajeError = 'Hubo un problema al conectar con el servidor';
     });
   }
 }

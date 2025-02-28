@@ -42,7 +42,6 @@ mat-toolbar.navbar {
   height: 40px;
   width: auto;
   margin-right: 10px;
-  border-radius: 8px;
 }
 
 .logo mat-icon {
@@ -65,7 +64,7 @@ button {
   border: none;
   border-radius: 8px;
   background: white;
-  color:rgb(18, 64, 128);
+  color:#124080;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
