@@ -33,8 +33,13 @@ export class RankingLugaresComponent implements OnInit {
       })
       .slice(0, 5);
   }
+  obtenerMediaValoraciones(valoraciones: any[]): number {
+    const valoracionesNumericas = valoraciones
+      .map(v => Number(v))
+      .filter(v => !isNaN(v) && v >= 1 && v <= 5);
 
-  obtenerMediaValoraciones(valoraciones: number[]): number {
-    return valoraciones.length > 0 ? valoraciones.reduce((a, b) => a + b, 0) / valoraciones.length : 0;
+    return valoracionesNumericas.length > 0
+      ? valoracionesNumericas.reduce((a, b) => a + b, 0) / valoracionesNumericas.length
+      : 0;
   }
 }

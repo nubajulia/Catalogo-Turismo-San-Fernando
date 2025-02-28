@@ -32,7 +32,6 @@ export class AdminComponent {
     imagenUrl: '',
     parrafo1: '',
     parrafo2: '',
-    imagenGaleria: [],
     valoracion: [],
     comentarios: [],
     comentarioUsuario: []
@@ -80,7 +79,6 @@ export class AdminComponent {
       imagenUrl: '',
       parrafo1: '',
       parrafo2: '',
-      imagenGaleria: [],
       valoracion: [],
       comentarios: [],
       comentarioUsuario: []

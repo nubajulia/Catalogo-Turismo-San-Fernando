@@ -5,7 +5,7 @@ mat-card {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding-top: 400px;
+  padding-top: 900px;
   text-align: center;
 }
 
@@ -107,6 +107,88 @@ p {
   color: #000000;
 }
 
+.nuevo-comentario {
+  background: #f4f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.nuevo-comentario h3 {
+  color: #124080;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+mat-form-field textarea {
+  min-height: 100px;
+}
+
+button {
+  background: #124080 !important;
+  color: white !important;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #0d3466 !important;
+  transform: scale(1.05);
+}
+
+.comentarios-section {
+  margin-top: 40px;
+}
+
+.comentarios-section h3 {
+  color: #124080;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+mat-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+mat-list-item mat-icon {
+  font-size: 24px;
+  color: #124080;
+}
+
+.comentario-content {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.comentario-content p {
+  margin: 0;
+}
+
+.sin-comentarios {
+  color: #777;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+}
 
 
 

@@ -6,7 +6,6 @@ export interface Lugar {
   imagenUrl: string;
   parrafo1: string;
   parrafo2: string;
-  imagenGaleria: string[];
   valoracion: number[];
   comentarios: string[];
   comentarioUsuario: string[];

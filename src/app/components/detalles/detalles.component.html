@@ -26,17 +26,16 @@
     <section class="comentarios-section">
       <h3>Comentarios</h3>
 
-      <mat-list *ngIf="lugar.comentarios.length > 0; else noComments">
-        <mat-list-item *ngFor="let comment of lugar.comentarios; let i = index">
-          <mat-icon matListIcon>person</mat-icon>
+      <mat-list *ngIf="lugar.comentarios.length > 0; else nocomentarios">
+        <mat-list-item *ngFor="let comentario of lugar.comentarios; let i = index">
           <div class="comentario-content">
             <p><strong>{{ lugar.comentarioUsuario[i] }}</strong></p>
-            <p>{{ comment }}</p>
+            <p>{{ comentario }}</p>
           </div>
         </mat-list-item>
       </mat-list>
 
-      <ng-template #noComments>
+      <ng-template #nocomentarios>
         <p class="sin-comentarios">Todavía no hay comentarios.</p>
       </ng-template>
     </section>
