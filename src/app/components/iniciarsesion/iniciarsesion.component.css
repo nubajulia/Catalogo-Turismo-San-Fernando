@@ -37,7 +37,11 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #124080;
+  background: linear-gradient(90deg, #01848b, #01848b);
+}
+
+button:disabled{
+  background: linear-gradient(90deg, #124080, #124080);
 }
 
 .error-message {
