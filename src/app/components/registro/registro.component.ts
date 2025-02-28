@@ -8,6 +8,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { NavbarComponent } from '../navbar/navbar.component';
 import * as bcrypt from 'bcryptjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -40,7 +41,7 @@ export class RegistroComponent {
     };
 
   private apiUrl: string = 'http://localhost:3000/usuarios';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   registro(): void {
     if (!this.validarInputs()) {
@@ -72,6 +73,18 @@ export class RegistroComponent {
         (response: any) => {
           console.log('Registro exitoso', response);
           alert('Usuario registrado correctamente.');
+
+          this.usuario = {
+            nombre: '',
+            apellido: '',
+            correo: '',
+            contrasena: '',
+            telefono: '',
+            cumpleanos: '',
+            genero: '',
+            rol: 'usuario',
+            comunidad: ''
+          };
         },
         (error: any) => {
           console.error('Error en el registro', error);
@@ -100,5 +113,9 @@ export class RegistroComponent {
   private validarCorreo(correo: string): boolean {
     const correoPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return correoPattern.test(correo);
+  }
+
+  irInicioSesion() {
+    this.router.navigate(['/iniciosesion']);
   }
 }

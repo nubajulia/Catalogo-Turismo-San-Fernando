@@ -57,14 +57,14 @@
           <input matInput type="text" [(ngModel)]="usuario.comunidad" name="comunidad">
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">
+        <button mat-raised-button type="submit" [disabled]="registerForm.invalid">
           Registrarse
         </button>
       </form>
     </mat-card-content>
 
     <mat-card-actions class="register-footer">
-      <button mat-button routerLink="/login">¿Ya tienes cuenta? <strong>Inicia sesión</strong></button>
+      <button mat-button (click)="irInicioSesion()">¿Ya tienes cuenta? <strong>Inicia sesión</strong></button>
     </mat-card-actions>
   </mat-card>
 </div>
