@@ -1,6 +1,6 @@
 # Catálogo de Turismo San Fernando
 
-## Autor: Julia Núñez Baña
+### Autor: Julia Núñez Baña
 
 **Descripción del Proyecto**
 
