@@ -3,6 +3,7 @@
 ## Autor: Julia Núñez Baña
 
 **Descripción del Proyecto**
+
 Esta aplicación web permite visualizar un catálogo de lugares de interés en San Fernando. Los usuarios pueden explorar diferentes localizaciones, ver los detalles de cada una de ellas y dejar tanto comentarios como valoraciones en sus ubicaciones favoritas! En el caso de los administradores, cuentan con un panel de administración en el cual pueden gestionar las localizaciones: consultar, editar o eliminar.
 
 **Estructura del Proyecto**
