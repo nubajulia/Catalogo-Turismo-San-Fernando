@@ -44,6 +44,11 @@
       </button>
 
       <button mat-button *ngIf="editando" type="button" (click)="cancelarEdicion()">Cancelar</button>
+
+      <button mat-raised-button (click)="generarPDF()">
+        <mat-icon>picture_as_pdf</mat-icon> Generar Informe PDF
+      </button>
+
     </form>
   </div>
 

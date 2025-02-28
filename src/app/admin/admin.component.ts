@@ -11,7 +11,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { v4 as uuidv4 } from 'uuid';
 import { NavbarComponent } from "../components/navbar/navbar.component"
+import { PdfMakeWrapper, Table, Txt } from 'pdfmake-wrapper';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts'
 
+(PdfMakeWrapper as any).setFonts(pdfFonts);
 @Component({
   selector: 'app-admin',
   standalone: true,
@@ -109,5 +112,25 @@ export class AdminComponent {
       comentarios: [],
       comentarioUsuario: []
     };
+  }
+
+  generarPDF(): void {
+    if (!this.lugares || this.lugares.length === 0) {
+      alert("No hay localizaciones registradas para generar el informe.");
+      return;
+    }
+
+    const pdf = new PdfMakeWrapper();
+
+    pdf.add(new Txt('Listado de Localizaciones').bold().fontSize(18).margin([0, 0, 0, 10]).end);
+
+    pdf.add(
+      new Table([
+        ['Nombre', 'Ubicación', 'Descripción'],
+        ...this.lugares.map(lugar => [lugar.nombre, lugar.localizacion, lugar.descripcion])
+      ]).widths(['30%', '30%', '40%']).layout('lightHorizontalLines').end
+    );
+
+    pdf.create().open();
   }
 }
